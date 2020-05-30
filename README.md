@@ -18,6 +18,6 @@
 Show class plan, school plan, meal and remote notice(supported notification).
 
 # License
-License under the [LGPL 3.0](https://github.com/sungbin5304/SchoolApp/blob/master/LICENSE)
+License under the [LGPL 3.0](https://github.com/sungbin5304/SchoolApp/blob/master/LICENSE).
 
 # Happy Coding :)
