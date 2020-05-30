@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_plan"
+            tools:ignore="ContentDescription" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:id="@+id/lav_empty"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_plan"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty_plan"
+        app:lottie_renderMode="hardware" />
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_default"
+        android:id="@+id/tv_empty"
+        android:fontFamily="@font/nanumgothic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_plan_first"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lav_empty"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

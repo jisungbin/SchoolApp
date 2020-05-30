@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    tools:ignore="NestedWeights,ContentDescription,TextFields,MissingConstraints,RtlSymmetry,Autofill,LabelFor,ScrollViewSize">
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_default"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:fontFamily="@font/nanumgothic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_notice"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="@dimen/normal_margin"
+        android:id="@+id/outlinedTextField"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/nanumgothic"
+        android:layout_height="wrap_content"
+        app:hintTextColor="@color/colorAccent"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:hint="@string/notice_title"
+        app:counterEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_title"
+            android:fontFamily="@font/nanumgothic"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField2"
+        android:layout_margin="@dimen/normal_margin"
+        android:fontFamily="@font/nanumgothic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextColor="@color/colorAccent"
+        android:hint="@string/notice_content"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:counterEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_content"
+            android:fontFamily="@font/nanumgothic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/nanumgothic"
+        android:text="@string/string_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

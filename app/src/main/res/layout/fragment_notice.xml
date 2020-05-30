@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="NestedWeights,ContentDescription,TextFields,MissingConstraints,RtlSymmetry,Autofill,LabelFor,ScrollViewSize">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
+        android:id="@+id/rv_notices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_empty"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty_state"
+        app:lottie_renderMode="hardware"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_marginTop="@dimen/half_margin"
+        android:id="@+id/tv_empty"
+        android:fontFamily="@font/nanumgothic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_notice"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lav_empty"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
