@@ -10,7 +10,6 @@
         tools:ignore="NestedWeights,ContentDescription,TextFields,MissingConstraints,RtlSymmetry,Autofill,LabelFor,ScrollViewSize">
 
     <com.google.android.material.appbar.AppBarLayout
-        tools:visibility="visible"
         android:visibility="gone"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -28,6 +27,7 @@
 
             <TextView
                 android:id="@+id/tv_title"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:fontFamily="@font/nanumgothic"
                 android:textStyle="bold"
@@ -41,7 +41,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.appbar.AppBarLayout
-        tools:visibility="gone"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:id="@+id/toolbar_layout"
@@ -121,7 +120,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
-        android:layout_marginTop="?attr/actionBarSize"
         android:id="@+id/framelayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"

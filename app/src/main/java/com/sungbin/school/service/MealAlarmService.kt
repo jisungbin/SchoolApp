@@ -6,7 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.core.content.ContextCompat
 import com.sungbin.school.R
-import com.sungbin.sungbintool.NotificationUtils
+import com.sungbin.school.utils.NotificationUtils
 import com.sungbin.sungbintool.StorageUtils
 
 abstract class MealAlarmService : Service() {

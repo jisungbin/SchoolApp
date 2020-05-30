@@ -25,14 +25,12 @@ import com.sungbin.school.utils.ImageUtils
 import com.sungbin.school.utils.NoticeUtils
 import com.sungbin.sungbintool.DataUtils
 import com.sungbin.sungbintool.StorageUtils
-import com.sungbin.sungbintool.StorageUtils.getFileSize
 import com.sungbin.sungbintool.ToastUtils
 import gun0912.tedbottompicker.TedBottomPicker
 import kotlinx.android.synthetic.main.activity_frame.*
 import java.io.File
 import java.net.URLDecoder
 import java.text.DecimalFormat
-import java.util.*
 import kotlin.math.log10
 import kotlin.math.pow
 
@@ -123,6 +121,7 @@ class FlameLayout : AppCompatActivity() {
                                         )}"
                                 }.addOnSuccessListener {
                                     riversRef.downloadUrl.addOnSuccessListener { link ->
+                                        Log.d("path - 2", link.toString())
                                         ImageUtils.set(link.toString(), PlanFragment.imageView, applicationContext)
                                         pDialog.cancel()
                                         ToastUtils.show(
@@ -168,7 +167,6 @@ class FlameLayout : AppCompatActivity() {
                     else {
                         fab.hide()
                     }
-                    fab.show()
                     fab.setOnClickListener {
                         val layout = LayoutInflater
                             .from(applicationContext)
@@ -197,7 +195,7 @@ class FlameLayout : AppCompatActivity() {
                     }
                 }
                 else -> { //설정
-                    tv_title.text = getString(R.string.string_setting)
+                    tv_title.text = getString(R.string.string_information)
                     toolbar_layout.visibility = View.GONE
                     toolbar_layout2.visibility = View.VISIBLE
                     fragmentTransaction.replace(

@@ -1,10 +1,9 @@
 package com.sungbin.school.service
 
-import android.app.NotificationManager
 import com.google.firebase.messaging.RemoteMessage
 import com.sungbin.school.R
 import com.sungbin.school.utils.NoticeUtils
-import com.sungbin.sungbintool.NotificationUtils
+import com.sungbin.school.utils.NotificationUtils
 import com.sungbin.sungbintool.StorageUtils
 import java.text.SimpleDateFormat
 import java.util.*
@@ -36,7 +35,7 @@ class FirebaseMessagingService : com.google.firebase.messaging.FirebaseMessaging
     }
 
     private fun getTime(): String {
-        val df = SimpleDateFormat("M-d a hh:mm", Locale.KOREA)
+        val df = SimpleDateFormat("M월 d일 a hh:mm", Locale.KOREA)
         val date = Date()
         return df.format(date)
     }

@@ -35,7 +35,6 @@ object ImageUtils {
     private class ImageDownloadTask : AsyncTask<String?, Void?, Void?>() {
         override fun doInBackground(vararg params: String?): Void? {
             try {
-                Log.d("AAA", "BBBBB")
                 val imageFile = File(params[0]!!)
                 if(imageFile.exists()) imageFile.delete()
                 val imgUrl = URL(params[1])

@@ -19,7 +19,6 @@
             android:layout_gravity="center"
             android:fontFamily="@font/nanumgothic"
             android:id="@+id/meal"
-            android:layout_margin="16dp"
             android:lineSpacingExtra="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

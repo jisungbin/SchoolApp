@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (DataUtils.readData(applicationContext, "type", "null") != "null") {
+       /* if (DataUtils.readData(applicationContext, "type", "null") != "null") {
             finish()
             startActivity(Intent(this, FlameLayout::class.java))
             return
-        }
+        }*/
 
         setContentView(R.layout.activity_main)
         tv_title.text = getString(R.string.input_information)
@@ -60,9 +60,9 @@ class MainActivity : AppCompatActivity() {
             room = item.toString().split("반")[0].toInt()
         }
 
-        radioGroup.setOnCheckedChangeListener { _, id ->
-            when (id) {
-                R.id.rb_student -> {
+        ts_type.setOnToggleSwitchChangeListener { position, _ ->
+            when (position) {
+                0 -> {
                     type = Type.STUDENT
                     YoYo.with(Techniques.FadeOut)
                         .withListener(object : Animator.AnimatorListener {

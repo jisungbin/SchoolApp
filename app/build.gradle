@@ -65,6 +65,7 @@ dependencies {
     implementation 'com.github.sungbin5304:PermissionRequester:1.0.0'
     implementation 'gun0912.ted:tedbottompicker:2.0.1'
     implementation 'gun0912.ted:tedimagepicker:1.1.1'
+    implementation 'us.belka:androidtoggleswitch:1.2.2'
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 

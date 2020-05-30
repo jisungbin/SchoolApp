@@ -26,6 +26,7 @@
 
             <TextView
                 android:id="@+id/tv_title"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:fontFamily="@font/nanumgothic"
                 android:textStyle="bold"
@@ -38,31 +39,34 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <FrameLayout
+        android:id="@+id/fl_ts"
+        android:background="@drawable/rounded_view_8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="252dp"
+        android:layout_height="58dp"
         app:layout_constraintBottom_toTopOf="@+id/outlinedTextField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
 
-        <RadioButton
-            android:fontFamily="@font/nanumgothic"
-            android:id="@+id/rb_student"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/string_student" />
-
-        <RadioButton
-            android:fontFamily="@font/nanumgothic"
-            android:id="@+id/rb_teacher"
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:gravity="center"
+            android:id="@+id/ts_type"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_teacher" />
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            app:inactiveBgColor="@color/white"
+            app:inactiveTextColor="@android:color/darker_gray"
+            app:activeBgColor="@color/colorAccent"
+            app:activeTextColor="@color/white"
+            app:separatorColor="@color/gray_very_light"
+            app:toggleWidth="125dp"
+            app:cornerRadius="@dimen/margin_half"
+            app:textToggleLeft="@string/string_student"
+            app:textToggleRight="@string/string_teacher"/>
 
-    </RadioGroup>
+    </FrameLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextField"
@@ -80,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:hintTextColor="@color/colorAccent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+        app:layout_constraintTop_toBottomOf="@+id/fl_ts">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_pw"
@@ -93,15 +97,22 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.jaredrummler.materialspinner.MaterialSpinner
-        android:id="@+id/ms_rooms"
+    <FrameLayout
+        android:background="@android:color/darker_gray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/normal_margin"
-        android:fontFamily="@font/nanumgothic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField" />
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField" >
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/ms_rooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumgothic" />
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/btn_done"
