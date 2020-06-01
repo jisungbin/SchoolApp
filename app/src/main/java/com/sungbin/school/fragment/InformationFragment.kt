@@ -153,13 +153,6 @@ class InformationFragment : Fragment() {
                 )
                 .setLibrary(
                     Library(
-                        "TedImagePicker",
-                        "https://github.com/ParkSangGwon/TedImagePicker",
-                        License.APACHE2
-                    )
-                )
-                .setLibrary(
-                    Library(
                         "PermissionRequester",
                         "https://github.com/sungbin5304/PermissionRequester",
                         License.APACHE2
