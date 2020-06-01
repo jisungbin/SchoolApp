@@ -161,38 +161,6 @@ class FoodFragment : Fragment() {
                 nextDay.performClick()
             }
         })
-
-        val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 1)
-        calendar.set(Calendar.MINUTE, 45)
-        calendar.set(Calendar.SECOND, 0)
-
-        val alarmIntent = Intent("MealAlarmServiceListener")
-            .putExtra("mealLoadYear", mealLoadYear!!)
-            .putExtra("mealLoadMonth", mealLoadMonth!!)
-            .putExtra("mealLoadDay", mealLoadDay!!)
-        val pendingIntent = PendingIntent.getBroadcast(
-            context,
-            0,
-            alarmIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT)
-
-        val alarmManager = context!!.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-
-        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M){
-            alarmManager.setExact(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                pendingIntent
-            )
-        }
-        else {
-            alarmManager.setExactAndAllowWhileIdle(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                pendingIntent
-            )
-        }
     }
 
     private fun getTime(type: String): String{

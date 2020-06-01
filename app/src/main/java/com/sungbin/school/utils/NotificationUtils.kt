@@ -1,8 +1,16 @@
 package com.sungbin.school.utils
 
-import android.app.*
+import android.R.attr.data
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationChannelGroup
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
+import android.widget.FrameLayout
 import androidx.core.app.NotificationManagerCompat
+import com.sungbin.school.activity.FlameLayout
+
 
 object NotificationUtils {
 
@@ -44,6 +52,13 @@ object NotificationUtils {
                 .setContentText(content)
                 .setSmallIcon(icon)
                 .setAutoCancel(true)
+            val intent = PendingIntent.getActivity(
+                context,
+                0,
+                Intent(context, FlameLayout::class.java),
+                0
+            )
+            builder.setContentIntent(intent)
             getManager(context).notify(id, builder.build())
         } else {
             val builder = Notification.Builder(context)
@@ -51,6 +66,13 @@ object NotificationUtils {
                 .setContentText(content)
                 .setSmallIcon(icon)
                 .setAutoCancel(true)
+            val intent = PendingIntent.getActivity(
+                context,
+                0,
+                Intent(context, FlameLayout::class.java),
+                0
+            )
+            builder.setContentIntent(intent)
             getManager(context).notify(id, builder.build())
         }
     }

@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-       /* if (DataUtils.readData(applicationContext, "type", "null") != "null") {
+       if (DataUtils.readData(applicationContext, "type", "null") != "null") {
             finish()
             startActivity(Intent(this, FlameLayout::class.java))
             return
-        }*/
+        }
 
         setContentView(R.layout.activity_main)
         tv_title.text = getString(R.string.input_information)

@@ -56,15 +56,6 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".service.MealAlarmService"/>
-
-        <receiver android:name=".listener.AlarmServiceListener"
-            tools:ignore="ExportedReceiver">
-            <intent-filter>
-                <action android:name="MealAlarmServiceListener"/>
-            </intent-filter>
-        </receiver>
-
     </application>
 
 </manifest>
