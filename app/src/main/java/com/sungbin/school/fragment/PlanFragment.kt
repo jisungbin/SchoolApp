@@ -1,5 +1,6 @@
 package com.sungbin.school.fragment
 
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
@@ -42,9 +43,11 @@ class PlanFragment : Fragment() {
         textView = tv_empty
 
         val path = ImageUtils.getDownloadFilePath(context!!)
+        var bitmap: Bitmap? = null
         if (File(path).exists()) {
-            Glide.set(context!!, BitmapFactory.decodeFile(path), imageView)
+            bitmap = BitmapFactory.decodeFile(path)
         }
+        if (bitmap != null) Glide.set(context!!, bitmap, imageView)
         else {
             val riversRef = FirebaseStorage.getInstance().reference
                 .child("${DataUtils.readData(context!!, "room", "3")}.plan")
