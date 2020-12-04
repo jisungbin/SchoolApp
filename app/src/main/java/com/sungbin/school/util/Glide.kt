@@ -1,4 +1,4 @@
-package com.sungbin.school.utils
+package com.sungbin.school.util
 
 import android.content.Context
 import android.content.res.Resources

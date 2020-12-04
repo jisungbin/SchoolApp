@@ -20,9 +20,9 @@ import com.google.firebase.storage.StorageException
 import com.sungbin.school.R
 import com.sungbin.school.dto.Type
 import com.sungbin.school.fragment.*
-import com.sungbin.school.utils.FirebaseUtils
-import com.sungbin.school.utils.ImageUtils
-import com.sungbin.school.utils.NoticeUtils
+import com.sungbin.school.util.FirebaseUtils
+import com.sungbin.school.util.ImageUtils
+import com.sungbin.school.util.NoticeUtils
 import com.sungbin.sungbintool.DataUtils
 import com.sungbin.sungbintool.StorageUtils
 import com.sungbin.sungbintool.ToastUtils

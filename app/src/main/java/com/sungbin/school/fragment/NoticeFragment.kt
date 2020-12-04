@@ -1,7 +1,6 @@
 package com.sungbin.school.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sungbin.recyclerviewadaptermaker.library.AdapterHelper
 import com.sungbin.school.R
-import com.sungbin.school.utils.NoticeUtils
+import com.sungbin.school.util.NoticeUtils
 import kotlinx.android.synthetic.main.fragment_notice.*
 
 /**

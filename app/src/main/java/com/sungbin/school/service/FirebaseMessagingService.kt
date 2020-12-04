@@ -2,8 +2,8 @@ package com.sungbin.school.service
 
 import com.google.firebase.messaging.RemoteMessage
 import com.sungbin.school.R
-import com.sungbin.school.utils.NoticeUtils
-import com.sungbin.school.utils.NotificationUtils
+import com.sungbin.school.util.NoticeUtils
+import com.sungbin.school.util.NotificationUtils
 import com.sungbin.sungbintool.StorageUtils
 import java.text.SimpleDateFormat
 import java.util.*

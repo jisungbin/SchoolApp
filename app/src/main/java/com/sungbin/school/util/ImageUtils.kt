@@ -1,8 +1,7 @@
-package com.sungbin.school.utils
+package com.sungbin.school.util
 
 import android.content.Context
 import android.os.AsyncTask
-import android.util.Log
 import android.widget.ImageView
 import com.sungbin.sungbintool.DataUtils
 import com.sungbin.sungbintool.StorageUtils

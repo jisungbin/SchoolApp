@@ -1,13 +1,11 @@
-package com.sungbin.school.utils
+package com.sungbin.school.util
 
-import android.R.attr.data
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationChannelGroup
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.widget.FrameLayout
 import androidx.core.app.NotificationManagerCompat
 import com.sungbin.school.activity.FlameLayout
 

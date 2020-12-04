@@ -1,4 +1,4 @@
-package com.sungbin.school.utils
+package com.sungbin.school.util
 
 import com.sungbin.sungbintool.StorageUtils
 import com.sungbin.sungbintool.StorageUtils.sdcard
